@@ -14,7 +14,7 @@ function query(){
     } 
     else{
       $(jel[i]).attr('type','sub');
-      $(jel[i]).css('background-color','#f3f');
+      $(jel[i]).css('background-color','#c29');
     }
     plate=plate>>>1;
   }
