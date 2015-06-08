@@ -1,8 +1,8 @@
 .wrap{
   max-width:600px;
-  font-size:24px;
+  font-size:18px;
 }
-
+.title{font-size:24px}
 .panel{
   width:600px;
   height:500px;
