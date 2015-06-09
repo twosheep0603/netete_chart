@@ -7,92 +7,82 @@
   </head>
 
 <body>
-  <div class='wrap'>
-	<div class='title'>Netete式雙色火力綜合表</div>
-	<fieldset class='tool'>
-    <legend>選項</legend>
-		<fieldset class='left'>
-		  <legend>類型</legend>
-		  <label>
-			<input checked='checked' name='mode' type='radio' value='uuu'>雙體</input>
-		  </label>
-		  <label>
-			<input name='mode' type='radio' value='combo'>純Combo</input>
-		  </label>
-		  <label>
-			<input name='mode' type='radio' value='rrow'>橫排</input>
-		  </label>
-		  <label class='upcoming'>
-			<input disabled='disabled' name='mode' type='radio' value='rowpp'>橫排點燈</input>
-		  </label>
-		  <label class='upcoming'>
-			<input disabled='disabled' name='mode' type='radio' value='herow'>英雄神</input>
-		  </label>
-		  <label class='upcoming'>
-			<input disabled='disabled' name='mode' type='radio' value='lakshmi'>覺水印</input>
-		  </label>
+	<div class='wrap'>
+		<div class='title'>Netete式雙色火力綜合表</div>
+		<fieldset class='tool'>
+			<legend>選項</legend>
+			<fieldset class='right'>
+				<legend>類型</legend>
+				<select id='mode'>
+					<option value='uuu'>雙體攻擊</option>
+					<option value='combo'>一般Combo</option>
+					<option value='rrow'>橫排</option>
+					<option value='rowpp'>橫排點燈</option>
+					<option disabled='disabled' value='herowpp'>英雄神點燈</option>
+					<option disabled='disabled' value='lakshmi'>覺醒拉克什米</option>
+				</select>
+			</fieldset>
+			<fieldset class='left'>
+				<legend>主屬性</legend>
+				<label>
+					<input name='color' type='radio' value='#f10'>火</input>
+				</label>
+				<label>
+					<input name='color' type='radio' value='#06d'>水</input>
+				</label>
+				<label>
+					<input checked='checked' name='color' type='radio' value='#0b3'>木</input>
+				</label>
+				<label>
+					<input name='color' type='radio' value='#fc1'>光</input>
+				</label>
+				<label>
+					<input name='color' type='radio' value='#93a'>暗</input>
+				</label>
+			</fieldset>
+			<div class='left'>
+				雜珠數
+				<input max='18' min='5' name='num' type='number' value='12'>
+				<input onclick='query()' type='button' value='查詢'>
+				<label>
+					<input name='mirror' onclick='reflect()' type='checkbox'>鏡像</input>
+				</label>
+			</div>
 		</fieldset>
-		<fieldset class='right'>
-		  <legend>主屬性</legend>
-		  <label>
-			<input name='color' type='radio' value='#f10'>火</input>
-		  </label>
-		  <label>
-			<input name='color' type='radio' value='#06d'>水</input>
-		  </label>
-		  <label>
-			<input checked='checked' name='color' type='radio' value='#0b3'>木</input>
-		  </label>
-		  <label>
-			<input name='color' type='radio' value='#fc1'>光</input>
-		  </label>
-		  <label>
-			<input name='color' type='radio' value='#93a'>暗</input>
-		  </label>
-		</fieldset>
-		<div class='right'>
-		  雜珠數
-		  <input max='18' min='5' name='num' type='number' value='12'>
-		  <input onclick='query()' type='button' value='查詢'>
-		  <label>
-			<input name='mirror' onclick='reflect()' type='checkbox'>鏡像</input>
-		  </label>
+		<div class='panel'>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='main'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='sub'></div>
+			<div class='jewel' type='sub'></div>
 		</div>
-	</fieldset>
-	<div class='panel'>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='main'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='sub'></div>
-		<div class='jewel' type='sub'></div>
 	</div>
-  </div>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="js/index.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>
