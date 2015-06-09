@@ -10,14 +10,14 @@
   <div class='wrap'>
 	<div class='title'>Netete式雙色火力綜合表</div>
 	<fieldset class='tool'>
-		<legend>選項</legend>
+    <legend>選項</legend>
 		<fieldset class='left'>
 		  <legend>類型</legend>
 		  <label>
 			<input checked='checked' name='mode' type='radio' value='uuu'>雙體</input>
 		  </label>
-		  <label class='upcoming'>
-			<input disabled='disabled' name='mode' type='radio' value='combo'>純Combo</input>
+		  <label>
+			<input name='mode' type='radio' value='combo'>純Combo</input>
 		  </label>
 		  <label>
 			<input name='mode' type='radio' value='rrow'>橫排</input>
@@ -52,7 +52,7 @@
 		</fieldset>
 		<div class='right'>
 		  雜珠數
-		  <input max='18' min='6' name='num' type='number' value='12'>
+		  <input max='18' min='5' name='num' type='number' value='12'>
 		  <input onclick='query()' type='button' value='查詢'>
 		  <label>
 			<input name='mirror' onclick='reflect()' type='checkbox'>鏡像</input>
