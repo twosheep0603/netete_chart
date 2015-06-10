@@ -25,6 +25,14 @@ function reflect(){
   else $('.panel').css('transform','none');
 }
 
+$('select').on('change',function(){
+  if($('#mode').val()=='lakshmi'){
+    //console.log("什米萌萌");
+    $('input[name=color]').attr('checked',false);
+    $('input[name=color][value="#06d"]').attr('checked',true);
+  }
+});
+
 /*Create Database*/
 var netete=  {
   'uuu':{
@@ -106,5 +114,21 @@ var netete=  {
     '16':51490786,
     '17':51490784,
     '18':16519104
+  },
+  'lakshmi':{
+    '5':803192639,
+    '6':1061109567,
+    '7':1069495103,
+    '8':1061106495,
+    '9':1067356607,
+    '10':1066240447,
+    '11':1066238399,
+    '12':1057222719,
+    '13':50176319,
+    '14':293112255,
+    '15':553390040,
+    '16':51744737,
+    '17':33304324,
+    '18':18386928
   }
 }
