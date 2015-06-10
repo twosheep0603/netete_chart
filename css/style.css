@@ -29,6 +29,7 @@
 
 .jewel{
   float:left;
+  position:relative;
   border:3px solid rgba(255,255,255,.8);
   transition:all 0.5s ease;
   /* Browser Specific */
