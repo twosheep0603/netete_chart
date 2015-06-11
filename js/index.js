@@ -1,39 +1,41 @@
 var netete;
 function query(){
-  cc = $('input[name=num]').val()
-  color = $('input[name=color]:checked').val()
-  mode = $('#mode').val()
-  jel=$('.jewel');
+  var cc = $('input[name=num]').val();
+  var color = $('input[name=color]:checked').val();
+  var mode = $('#mode').val();
+  var jel = $('.jewel');
   var plate = netete[mode][cc];
-  
-  for(i=0;i<jel.length;i++){
-    if(plate&1){
-      $(jel[i]).attr('type','main');
-      $(jel[i]).css('background-color',color);
+
+  for(var i = 0; i < jel.length; i++){
+    if(plate & 1){
+      $(jel[i]).attr('type', 'main');
+      $(jel[i]).css('background-color', color);
     } 
     else{
-      $(jel[i]).attr('type','sub');
-      $(jel[i]).css('background-color','#c29');
+      $(jel[i]).attr('type', 'sub');
+      $(jel[i]).css('background-color', '#c29');
     }
-    plate=plate>>>1;
+    plate = plate >>> 1;
   }
 }
 
 function reflect(){
   if($('input[name="mirror"]').is(':checked'))
-  $('.panel').css('transform','matrix(-1,0,0,1,0,0)');
-  else $('.panel').css('transform','none');
+    $('.panel').css('transform', 'matrix(-1,0,0,1,0,0)');
+  else $('.panel').css('transform', 'none');
 }
 /**/
-$('select').on('change',function(){
-  mode = $('#mode').val()
-  if(mode=='lakshmi' || mode=='saraswati'){
-    console.log("什米萌萌 新水印超正");
-    $('input[name=color]').attr('checked',false);
-    $('input[name=color]')[1].checked=true;
-  }else if(mode=='krishna'){
-    $('input[name=color]').attr('checked',false);
-    $('input[name=color]')[0].checked=true;
+$('select').on('change', function(){
+  var mode = $('#mode').val();
+  if(mode === 'lakshmi' || mode === 'saraswati'){
+    console.log('什米萌萌 新水印超正');
+    $('input[name=color]').attr('checked', false);
+    $('input[name=color]')[1].checked = true;
+  }else if(mode === 'krishna'){
+    $('input[name=color]').attr('checked', false);
+    $('input[name=color]')[0].checked = true;
+  }else if(mode === 'uuu'){
+    console.log("還不是靠劉備");
   }
 });
 
