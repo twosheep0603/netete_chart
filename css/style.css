@@ -1,8 +1,7 @@
-::selection{background:transparent}
 .main{
   color:#eee;
   background:#222;
-  cursor: pointer;
+  cursor: default;
 }
 .wrap{
   max-width:500px;
