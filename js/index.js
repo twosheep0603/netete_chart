@@ -24,8 +24,9 @@ function reflect(){
     $('.panel').css('transform', 'matrix(-1,0,0,1,0,0)');
   else $('.panel').css('transform', 'none');
 }
+
 /**/
-$('select').on('change', function(){
+$('#mode').on('change', function(){
   var mode = $('#mode').val();
   if(mode === 'lakshmi' || mode === 'saraswati'){
     console.log('什米萌萌 新水印超正');
@@ -37,6 +38,15 @@ $('select').on('change', function(){
   }else if(mode === 'uuu'){
     console.log("還不是靠劉備");
   }
+  query();
+});
+
+$('#subnum').change(function(){
+  query();
+});
+
+$('input[name=color]').change(function(){
+  query();
 });
 
 /*Create Database*/
