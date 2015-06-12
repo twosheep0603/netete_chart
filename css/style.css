@@ -1,10 +1,11 @@
+::selection{background:transparent}
 .main{
   color:#eee;
   background:#222;
   cursor: default;
 }
 .wrap{
-  max-width:500px;
+  width:500px;
   font-size:18px;
 }
 .tool{margin:10px}
@@ -15,15 +16,10 @@
   height:400px;
   background-color: #320800;
   background-image: linear-gradient(45deg, #521 25%, transparent 25%, transparent 75%, #521 75%, #521), 
-					linear-gradient(45deg, #521 25%, transparent 25%, transparent 75%, #521 75%, #521);
-  background-size:160px 160px;
-  background-position:0 0, 80px 80px;
-  filter: brightness(1.1) saturate(1.2);
-  /* Browser Specific */
+linear-gradient(45deg, #521 25%, transparent 25%, transparent 75%, #521 75%, #521);
+background-size:160px 160px;
+background-position:0 0, 80px 80px;
   -webkit-filter: brightness(1.1) saturate(1.2);
-  -moz-filter: brightness(1.1) saturate(1.2);
-  -o-filter: brightness(1.1) saturate(1.2);
-  -ms-filter: brightness(1.1) saturate(1.2);
 }
 
 .jewel{
@@ -31,11 +27,6 @@
   position:relative;
   border:3px solid rgba(255,255,255,.8);
   transition:all 0.5s ease;
-  /* Browser Specific */
-  -webkit-transition:all 0.5s ease;
-  -moz-transition:all 0.5s ease;
-  -o-transition:all 0.5s ease;
-  -ms-transition:all 0.5s ease;
 }
 .jewel[type='main']{
   margin:2px;
@@ -91,13 +82,110 @@
 input,select{
   font-size:16px;
 }
+input::selection{background:#cff !important}
 .upcoming{color:#666 !important}
 input[type="number"]{width:60px}
 fieldset{
   color:#eee;
   border:1px solid;
   text-shadow:1px 1px 3px black;
-  box-shadow:1px 1px 3px 1px black;
+  box-shadow:1px 1px 5px 1px #111,1px 1px 5px 1px #111 inset;
 }
 .left{width:auto;float:left;padding-top:10px;}
 .right{width:170px;height:54px;float:right;padding:8px 10px 9px 10px}
+
+@media screen and (max-device-width: 500px){
+  .wrap{
+  width:300px;
+  font-size:12px;
+}
+.tool{margin:0px}
+.title{font-size:18px}
+.panel{
+  width:300px;
+  height:250px;
+  margin-left:0px;
+  margin-top:5px;
+  background-color: #320800;
+  background-image: linear-gradient(45deg, #521 25%, transparent 25%, transparent 75%, #521 75%, #521), 
+linear-gradient(45deg, #521 25%, transparent 25%, transparent 75%, #521 75%, #521);
+background-size:100px 100px;
+background-position:0 0, 50px 50px;
+  -webkit-filter: brightness(1.1) saturate(1.2);
+}
+
+.jewel{
+  float:left;
+  position:relative;
+  border:2px solid rgba(255,255,255,.8);
+  transition:all 0.5s ease;
+}
+.jewel[type='main']{
+  margin:1px;
+  width:44px;
+  height:44px;
+  background:#0b3;
+  border-radius:50%;
+  box-shadow:0px -15px 25px rgba(50,10,10,0.5) inset,0px 0px 5px 2px rgba(0,0,0,0.5)
+}
+.jewel[type='sub']{
+  background:#c29;
+  margin:3px;
+  width:40px;
+  height:40px;
+  border-radius:3px;
+  box-shadow:0px -5px 8px 4px rgba(255,210,210,0.4) inset,0px 0px 5px 2px rgba(0,0,0,0.5)
+}
+.jewel[type='main']:before{
+  content:' ';
+  background:rgba(255,255,255,.6);
+  position:absolute;
+  margin-left:8px;
+  margin-top:1px;
+  width:28px;
+  height:20px;
+  border-radius:50%;
+  z-index:100;
+}
+
+.jewel[type='sub']:before{
+  content:' ';
+  background:rgba(255,255,255,.4);
+  position:absolute;
+  margin-left:6px;
+  margin-top:2px;
+  width:30px;
+  height:10px;
+  border-radius:3px;
+  box-shadow:0px 5px 5px 5px rgba(255,255,255,.4);
+  z-index:100;
+}
+.jewel[type='main']:after{
+  content:' ';
+  background:rgba(0,0,0,.2);
+  position:absolute;
+  margin-left:5px;
+  margin-top:15px;
+  width:34px;
+  height:26px;
+  border-radius:50%;
+  z-index:99;
+}
+input,select{
+  font-size:12px;
+}
+input::selection{background:#cff !important}
+.upcoming{color:#666 !important}
+input[type="number"]{width:60px}
+fieldset{
+  color:#eee;
+  border:1px solid;
+  text-shadow:1px 1px 3px black;
+  box-shadow:1px 1px 5px 1px #111,1px 1px 5px 1px #111 inset;
+}
+.left,.right{
+  width:90%;
+  height:auto;
+  float:none;
+}
+}
